@@ -3,11 +3,13 @@ function compute(){
     var typeList = new Array();
     for (i=0;i<6;i++){
         var selectName = "select" + i;
-        var t1 = document.getElementById(selectName).getType1;
+        var t1 = document.getElementById(selectName);
+        var t1Val = t1[t1.selectedIndex].value;
+        console.log(t1Val);
         if(t1 == "fairy"){
             t1 = "normal";
         }
-        var t2 = document.getElementById(selectName).getType2;
+        var t2 = document.getElementById(selectName).pokeType2;
         if(t2 == "fairy"){
             t2 = "none";
         }
@@ -58,7 +60,7 @@ function compute(){
             weaklist.push("bug");
             strongList.push("water");
             strongList.push("electric");
-            strongList.push("grass");weakList
+            strongList.push("grass");
             strongList.push("ground");
             break;
 
@@ -78,8 +80,8 @@ function compute(){
 
             case "poison":
             weakList.push("ground");
-            weakList.push("psychic");weakList
-            strongList.push("grass");weakList
+            weakList.push("psychic");
+            strongList.push("grass");
             strongList.push("fighting");
             strongList.push("poison");
             strongList.push("bug");
@@ -147,183 +149,31 @@ function compute(){
             break;
 
         }
-        // //TODO: create a dictionary to add up weaklist and subtract stronglist
-        // var pokeDict = {"normal" : 0,
-        // "fighting" : 0,
-        // "flying" : 0,
-        // "poison" : 0,
-        // "ground" : 0,
-        // "rock" : 0,
-        // "bug" : 0,
-        // "ghost" : 0,
-        // "fire" : 0,
-        // "water" : 0,
-        // "grass" : 0,
-        // "electric" : 0,
-        // "psychic" : 0,
-        // "ice" : 0,
-        // "dragon" : 0
-        // };
-
-        // //add weakness to the dictionary
-
-        // for(i=0;i<weakList.length;i++){
-        //     switch (weakList[i]){
-            
-        //         case "normal":
-        //         pokeDict.normal += 1;
-        //         break;
-    
-        //         case "fire":
-        //         pokeDict.fire +=1;
-        //         break;
-    
-        //         case "water":
-        //         pokeDict.water +=1;
-               
-    
-        //         case "electric":
-        //         pokeDict.electric +=1;
-        //         break;
-    
-        //         case "grass":
-        //         pokeDict.grass +=1;
-        //         break;
-    
-        //         case "ice":
-        //         pokeDict.ice +=1;
-        //         break;
-    
-        //         case "fighting":
-        //         pokeDict.fighting +=1;
-        //         break;
-    
-        //         case "poison":
-        //         pokeDict.poison +=1;
-        //         break;
-    
-        //         case "ground":
-        //         pokeDict.ground +=1;
-        //         break;
-    
-        //         case "flying":
-        //         pokeDict.flying +=1;
-        //         break;
-    
-        //         case "psychic":
-        //         pokeDict.psychic +=1;
-        //         break;
-    
-        //         case "bug":
-        //         pokeDict.bug +=1;
-        //         break;
-                
-        //         case "rock":
-        //         pokeDict.rock +=1;
-        //         break;
-    
-        //         case "ghost":                       
-        //         pokeDict.ghost +=1;
-        //         break;
-    
-        //         case "dragon":
-        //         pokeDict.dragon +=1;
-        //         break;
-        //     }
-        // }
-
-        // //add strenghts to dictionary 
-
-        // for(i=0;i<strongList.length;i++){
-        //     switch (strongList[i]){
-            
-        //         case "normal":
-        //         pokeDict.normal += -1;
-        //         break;
-    
-        //         case "fire":
-        //         pokeDict.fire +=-1;
-        //         break;
-    
-        //         case "water":
-        //         pokeDict.water +=-1;
-               
-    
-        //         case "electric":
-        //         pokeDict.electric +=-1;
-        //         break;
-    
-        //         case "grass":
-        //         pokeDict.grass +=-1;
-        //         break;
-    
-        //         case "ice":
-        //         pokeDict.ice +=-1;
-        //         break;
-    
-        //         case "fighting":
-        //         pokeDict.fighting +=-1;
-        //         break;
-    
-        //         case "poison":
-        //         pokeDict.poison +=-1;
-        //         break;
-    
-        //         case "ground":
-        //         pokeDict.ground +=-1;
-        //         break;
-    
-        //         case "flying":
-        //         pokeDict.flying +=-1;
-        //         break;
-    
-        //         case "psychic":
-        //         pokeDict.psychic +=-1;
-        //         break;
-    
-        //         case "bug":
-        //         pokeDict.bug +=-1;
-        //         break;
-                
-        //         case "rock":
-        //         pokeDict.rock +=-1;
-        //         break;
-    
-        //         case "ghost":                       
-        //         pokeDict.ghost +=-1;
-        //         break;
-    
-        //         case "dragon":
-        //         pokeDict.dragon +=-1;
-        //         break;
-        //     }
-        // }
-
-
+        
         class pokeType{
             constructor(name,value){
                 this.name = name;
                 this.value = value;
             }
-            getName(){return this.name}
-            getValue(){return this.value}
+            getName(){return this.name;}
+            getValue(){return this.value;}
             setValue(number){this.value = number;}
         }
 
-        var fire = new pokeType(fire,0);
-        var water = new pokeType(water,0);
-        var electric = new pokeType(electric,0);
-        var grass = new pokeType(grass,0);
-        var ice = new pokeType(ice,0);
-        var fighting = new pokeType(fighting,0);
-        var poison = new pokeType(poison,0);
-        var ground = new pokeType(ground,0);
-        var flying = new pokeType(flying,0);
-        var psychic = new pokeType(psychic,0);
-        var bug = new pokeType(bug,0);
-        var rock = new pokeType(rock,0);
-        var ghost = new pokeType(ghost,0);
-        var dragon = new pokeType(dragon,0);
+        var fire = new pokeType("fire",0);
+        var water = new pokeType("water",0);
+        var electric = new pokeType("electric",0);
+        var grass = new pokeType("grass",0);
+        var ice = new pokeType("ice",0);
+        var fighting = new pokeType("fighting",0);
+        var poison = new pokeType("poison",0);
+        var ground = new pokeType("ground",0);
+        var flying = new pokeType("flying",0);
+        var psychic = new pokeType("psychic",0);
+        var bug = new pokeType("bug",0);
+        var rock = new pokeType("rock",0);
+        var ghost = new pokeType("ghost",0);
+        var dragon = new pokeType("dragon",0);
 
 
         // //add weakness to the dictionary
@@ -332,63 +182,63 @@ function compute(){
             switch (weakList[i]){
             
                 case "normal":
-                normal.setValue(normal.value + 1);
+                normal.setValue(normal.getValue() + 1);
                 break;
     
                 case "fire":
-                fire.setValue(fire.value + 1);
+                fire.setValue(fire.getValue() + 1);
                 break;
     
                 case "water":
-                water.setValue(water.value + 1);
+                water.setValue(water.getValue() + 1);
                 break;
     
                 case "electric":
-                electric.setValue(electric.value + 1);
+                electric.setValue(electric.getValue() + 1);
                 break;
     
                 case "grass":
-                grass.setValue(grass.value + 1);
+                grass.setValue(grass.getValue() + 1);
                 break;
     
                 case "ice":
-                ice.setValue(ice.value + 1);
+                ice.setValue(ice.getValue() + 1);
                 break;
     
                 case "fighting":
-                fighting.setValue(fighting.value + 1);
+                fighting.setValue(fighting.getValue() + 1);
                 break;
     
                 case "poison":
-                poison.setValue(poison.value + 1);
+                poison.setValue(poison.getValue() + 1);
                 break;
     
                 case "ground":
-                ground.setValue(ground.value + 1);
+                ground.setValue(ground.getValue() + 1);
                 break;
     
                 case "flying":
-                flying.setValue(flying.value + 1);
+                flying.setValue(flying.getValue() + 1);
                 break;
     
                 case "psychic":
-                psychic.setValue(psychic.value + 1);
+                psychic.setValue(psychic.getValue() + 1);
                 break;
     
                 case "bug":
-                bug.setValue(bug.value + 1);
+                bug.setValue(bug.getValue() + 1);
                 break;
                 
                 case "rock":
-                rock.setValue(rock.value + 1);
+                rock.setValue(rock.getValue() + 1);
                 break;
     
                 case "ghost":                       
-                ghost.setValue(ghost.value + 1);
+                ghost.setValue(ghost.getValue() + 1);
                 break;
     
                 case "dragon":
-                dragon.setValue(dragon.value + 1);
+                dragon.setValue(dragon.getValue() + 1);
                 break;
             }
         }
@@ -399,63 +249,63 @@ function compute(){
             switch (strongList[i]){
             
                 case "normal":
-                normal.setValue(normal.value - 1);
+                normal.setValue(normal.getValue() - 1);
                 break;
     
                 case "fire":
-                fire.setValue(fire.value - 1);
+                fire.setValue(fire.getValue() - 1);
                 break;
     
                 case "water":
-                water.setValue(water.value - 1);
+                water.setValue(water.getValue() - 1);
                 break;
     
                 case "electric":
-                electric.setValue(electric.value - 1);
+                electric.setValue(electric.getValue() - 1);
                 break;
     
                 case "grass":
-                grass.setValue(grass.value - 1);
+                grass.setValue(grass.getValue() - 1);
                 break;
     
                 case "ice":
-                ice.setValue(ice.value - 1);
+                ice.setValue(ice.getValue() - 1);
                 break;
     
                 case "fighting":
-                fighting.setValue(fighting.value - 1);
+                fighting.setValue(fighting.getValue() - 1);
                 break;
     
                 case "poison":
-                poison.setValue(poison.value - 1);
+                poison.setValue(poison.getValue() - 1);
                 break;
     
                 case "ground":
-                ground.setValue(ground.value - 1);
+                ground.setValue(ground.getValue() - 1);
                 break;
     
                 case "flying":
-                flying.setValue(flying.value - 1);
+                flying.setValue(flying.getValue() - 1);
                 break;
     
                 case "psychic":
-                psychic.setValue(psychic.value - 1);
+                psychic.setValue(psychic.getValue() - 1);
                 break;
     
                 case "bug":
-                bug.setValue(bug.value - 1);
+                bug.setValue(bug.getValue() - 1);
                 break;
                 
                 case "rock":
-                rock.setValue(rock.value - 1);
+                rock.setValue(rock.getValue() - 1);
                 break;
     
                 case "ghost":                       
-                ghost.setValue(ghost.value - 1);
+                ghost.setValue(ghost.getValue() - 1);
                 break;
     
                 case "dragon":
-                dragon.setValue(dragon.value - 1);
+                dragon.setValue(dragon.getValue() - 1);
                 break;
             }
         }
@@ -476,13 +326,16 @@ function compute(){
         rankedArray.push(ghost);
         rankedArray.push(dragon);
 
-        rankedArray.sort(function(a,b){return b.getValue - a.getValue});
+        rankedArray.sort(function(a,b){return b.getValue() - a.getValue()});
+
+        var resultTitle = document.createElement("h3");
+            resultTitle.textContent = "Team weak against:";
+            document.getElementById("result").appendChild(resultTitle);
 
         var i = 0;
         for(i=0; i<rankedArray.length; i++){
-            console.log(rankedArray[i].getName);
             var result = document.createElement("p");
-            result.textContent = rankedArray[i].getName;
+            result.textContent = rankedArray[i].getName();
             document.getElementById("result").appendChild(result);
         }
     }
