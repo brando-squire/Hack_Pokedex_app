@@ -1,11 +1,60 @@
+{% load static %}
+
 <!doctype html>
+
 <html lang=en>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="{% static 'pokedex/style.css' %}" type="text/css"/>
+        <title>Pokemon Team Creater</title>
+        <style>
+            body {
+                background-color: white;
+            }
+        </style>
+    </head>
 
-<head>
-        <title>Pokedex site</title>
-</head>
-
-<body>
-        
-</body>
+    <body>
+        <h1>Team Builder</h1>
+        <h3>Pick Pokemon in your team</h3>
+        <div>
+            <label>First Pokemon</label>
+            <select id="select0" name="pokemon0">
+                <option value="filler">pokemon filler</option>
+            </select>
+        </div>
+        <div>
+            <label>Second Pokemon</label>
+            <select id="select1" name="pokemon1">
+                <option value="filler">pokemon filler</option>
+            </select>
+        </div>
+        <div>
+            <label>Third Pokemon</label>
+            <select id="select2" name="pokemon2">
+                <option value="filler">pokemon filler</option>
+            </select>
+        </div>
+        <div>
+            <label>Fourth Pokemon</label>
+            <select id="select3" name="pokemon3">
+                <option value="filler">pokemon filler</option>
+            </select>
+        </div>
+        <div>
+            <label>Fifth Pokemon</label>
+            <select id="select4" name="pokemon4">
+                <option value="filler">pokemon filler</option>
+            </select>
+        </div>
+        <div>
+            <label>Sixth Pokemon</label>
+            <select id="select5" name="pokemon5">
+                <option value="filler">pokemon filler</option>
+            </select>
+        </div>
+        <div>
+            <button id="submit" type="button" onclick="">Submit Team!</button>
+        </div>
+    </body>
 </html>
