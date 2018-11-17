@@ -6,6 +6,7 @@
     <head>
         <meta charset="utf-8"/>
         <link rel="stylesheet" href="{% static 'pokedex/style.css' %}" type="text/css"/>
+        <script type="text/javascript" src="{% static 'pokedex/scripts/computeWeak.js' %}"></script>
         <title>Pokemon Team Creater</title>
         <style>
             body {
@@ -57,7 +58,7 @@
                 </div>
             </div>
             <div class="submit-btn">
-                <button id="submit" type="button" onclick="">Submit Team!</button>
+                <button id="submit" type="button" onclick="compute(this)">Submit Team!</button>
             </div>
             <div id="result"></div>
         </div>

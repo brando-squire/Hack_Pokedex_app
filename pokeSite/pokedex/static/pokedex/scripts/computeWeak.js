@@ -483,8 +483,7 @@ function compute(){
             console.log(rankedArray[i].getName);
             var result = document.createElement("p");
             result.textContent = rankedArray[i].getName;
-            document.getElementById("results").appendChild();
-            
+            document.getElementById("result").appendChild(result);
         }
     }
 }
