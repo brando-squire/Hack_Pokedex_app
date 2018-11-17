@@ -30,7 +30,7 @@ label{
 
 .center-div{
     background-color: rgb(40, 40, 40);
-    margin: 0 auto;
+    margin: 10px auto;
     width: 500px;
     padding: 10px;
     text-align: center;
@@ -48,11 +48,7 @@ label{
     margin: 0 auto;
 }
 
-.center-item{
-    display: flex;
-    justify-content: center;
-}
-
 .outer-picker{
-    
+    display: flex;
+    flex-direction: column;
 }
