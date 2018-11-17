@@ -5,11 +5,6 @@ class pokemon(models.Model):
     pokeType1 = models.CharField(max_length = 20)
     pokeType2 = models.CharField(max_length = 20)
 
-    def getName(self):
-        return self.pokeName
+    def __str__(self):
+        return '%s %s %s' % (self.pokeName, self.pokeType1, self.pokeType2)
 
-    def getType1(self):
-        return self.pokeType1
-
-    def getType2(self):
-        return self.pokeType2
