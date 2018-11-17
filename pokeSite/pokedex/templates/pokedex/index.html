@@ -23,37 +23,49 @@
                 <div class="center-div">
                     <label>First Pokemon</label>
                     <select id="select0" name="pokemon0">
-                        <option value="filler">pokemon filler</option>
+                        {% for p in pokelist %}
+                        <option value={{ p.pokeName }}>{{p.pokeName}}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="center-div">
                     <label>Second Pokemon</label>
                     <select id="select1" name="pokemon1">
-                        <option value="filler">pokemon filler</option>
+                        {% for p in pokelist %}
+                        <option value={{ p.pokeName }}>{{p.pokeName}}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="center-div">
                     <label>Third Pokemon</label>
                     <select id="select2" name="pokemon2">
-                        <option value="filler">pokemon filler</option>
+                        {% for p in pokelist %}
+                        <option value={{ p.pokeName }}>{{p.pokeName}}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="center-div">
                     <label>Fourth Pokemon</label>
                     <select id="select3" name="pokemon3">
-                        <option value="filler">pokemon filler</option>
+                        {% for p in pokelist %}
+                        <option value={{ p.pokeName }}>{{p.pokeName}}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="center-div">
                     <label>Fifth Pokemon</label>
                     <select id="select4" name="pokemon4">
-                        <option value="filler">pokemon filler</option>
+                        {% for p in pokelist %}
+                        <option value={{ p.pokeName }}>{{p.pokeName}}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div class="center-div">
                     <label>Sixth Pokemon</label>
                     <select id="select5" name="pokemon5">
-                        <option value="filler">pokemon filler</option>
+                        {% for p in pokelist %}
+                        <option value={{ p.pokeName }}>{{p.pokeName}}</option>
+                        {% endfor %}
                     </select>
                 </div>
             </div>
