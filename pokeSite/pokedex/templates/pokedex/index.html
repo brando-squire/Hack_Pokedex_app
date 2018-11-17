@@ -22,6 +22,9 @@
                 <div class="center-div">
                     <label>First Pokemon</label>
                     <select id="select0" name="pokemon0">
+                        {% for p in pokelist %}
+                        <option>{{p}}</option>
+                        {% endfor %}
                         <option value="filler">pokemon filler</option>
                     </select>
                 </div>
