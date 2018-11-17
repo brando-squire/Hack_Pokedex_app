@@ -6,6 +6,10 @@ from .models import pokemon
 
 
 def index(request):
+
+    return HttpResponse("hi")
+
+pokeList = pokemon.objects.all().order_by('getName')
     response = requests.get('https://pokeapi.co/api/v2/pokemon/')
     for j in range(1,151):
         allPokeData = response.json()
