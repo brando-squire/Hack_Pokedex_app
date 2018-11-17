@@ -27,4 +27,4 @@ def init(request):
             type2 = "none"
         p = pokemon(pokeName = allPokeData['results'][i]['name'], pokeType1 = type1, pokeType2 = type2)
 
-    return redirect('pokedex:index')    
+    return redirect('pokedex:index')
