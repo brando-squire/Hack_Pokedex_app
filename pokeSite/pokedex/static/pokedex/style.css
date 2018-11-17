@@ -1,6 +1,6 @@
 h1{
     display: flex;
-    flex-direction: center;
+    justify-content: center;
     color: royalblue;
     padding: 30px;
     background-color: rgb(40, 40, 40);
@@ -8,11 +8,10 @@ h1{
 
 h3{
     display: flex;
+    justify-content: center;
     color: gold;
-    padding-bottom: 10px;
-    padding-right: 10px;
-    padding-left: 10px;
-    background-color: rgb(40, 40, 40);
+    padding: 10px;
+    background-color: rgb(20, 20, 20);
 }
 
 label{
@@ -20,5 +19,40 @@ label{
 }
 
 .pokepicker{
+    align-content: center;
+    padding: 10px;
+}
+
+.maindiv{
+    position: relative;
+    background-color: rgb(70, 70, 70);
+}
+
+.center-div{
     background-color: rgb(40, 40, 40);
+    margin: 0 auto;
+    width: 500px;
+    padding: 10px;
+    text-align: center;
+}
+
+.submit-btn{
+    background-color: rgb(20, 20, 20);
+    padding: 10px;
+    justify-content: center;
+}
+
+#submit{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.center-item{
+    display: flex;
+    justify-content: center;
+}
+
+.outer-picker{
+    
 }
